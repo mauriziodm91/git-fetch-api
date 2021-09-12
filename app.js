@@ -11,12 +11,13 @@ searchUser.addEventListener('keyup', (e)=>{
             .then(data => {
                 if(data.profile.message === 'Not Found'){
                     //the alert message goes in here
+                    ui.showAlert('User Not Found', 'alert alert-danger');
                 } else {
                     //the profile goes in here
                     ui.showProfile(data.profile);
                 }
             })
     } else {
-
+        ui.clearProfile();
     }
 });
